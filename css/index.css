@@ -36,11 +36,11 @@ button:focus {
 }
 
 section {
-  transition: 1s ease;
+  transition: 0.7s ease;
 }
 .section--hidden {
   opacity: 0;
-  transform: translateY(8rem);
+  transform: translateY(6rem);
 }
 /* Header */
 

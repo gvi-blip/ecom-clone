@@ -1,6 +1,7 @@
 let current = 1;
 let prev = 1;
 let interval = 3;
+console.log(window.innerHeight);
 const products = document.querySelectorAll("#hero .products-cont .product");
 products[current].lastElementChild.classList += " selected";
 const heroImgs = document.getElementsByClassName("hero-images");
@@ -28,7 +29,6 @@ function check() {
   }
 }
 
-console.log(window.innerHeight);
 products.forEach((product, index) => {
   product.addEventListener("click", () => {
     clearInterval(change);
@@ -106,7 +106,7 @@ const sections = document.querySelectorAll("section+section");
 let options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.1,
+  threshold: calculateThreshold(),
 };
 let count = 0;
 let callback = (entries, observer) => {
@@ -124,3 +124,14 @@ sections.forEach((section) => {
   section.classList.add("section--hidden");
   observer.observe(section);
 });
+
+function calculateThreshold() {
+  let width = window.innerWidth;
+  if (width <= 425) {
+    return 0.01;
+  } else if (width > 425 && width <= 768) {
+    return 0.02;
+  } else {
+    return 0.05;
+  }
+}
