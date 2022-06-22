@@ -35,16 +35,18 @@ button:focus {
   font-family: "Open Sans", sans-serif;
 }
 
+section {
+  transition: 1s ease;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
 /* Header */
 
 header {
   padding: 10px 0px;
   background: rgb(179, 186, 197, 0.2);
-  /* background: rgb(179, 186, 197);
-  position: fixed;
-  right: 0;
-  width: 100%;
-  z-index: 4; */
   position: relative;
 }
 
@@ -201,7 +203,6 @@ nav a {
 
 #hero {
   padding-top: 80px;
-  /* border: 1px solid black; */
   background: rgb(179, 186, 197, 0.2);
 }
 
@@ -215,7 +216,6 @@ nav a {
   width: 490px;
   height: 421px;
   position: relative;
-  /* border: 1px solid black; */
 }
 
 .content {
@@ -335,11 +335,8 @@ nav a {
 
 #hero .img-container {
   width: 36%;
-  height: 50%;
-  height: 415px;
+  height: 420px;
   position: relative;
-
-  /* border: 1px solid black; */
 }
 
 .hero-images {
@@ -353,7 +350,6 @@ nav a {
 #blue-c {
   height: 40px;
   width: 40px;
-  /* top: 10px; */
 }
 
 #bbd {
@@ -375,13 +371,12 @@ nav a {
 #blackwatch {
   left: 3%;
   z-index: 2;
-  height: 102%;
-  width: 102%;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
 }
 
 #dotted-pattern {
-  /* left: 30px; */
   left: -22px;
   height: 130px;
   width: 130px;
@@ -402,7 +397,6 @@ nav a {
 .products-cont {
   width: 100%;
   margin-top: 40px;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
 }
@@ -420,7 +414,6 @@ nav a {
   border-radius: 8px;
   margin-top: 20px;
   text-align: center;
-  /* flex-direction: row; */
 }
 
 .single-product-card img {
@@ -433,7 +426,6 @@ nav a {
   position: absolute;
   opacity: 0;
   margin-left: 0 !important;
-  /* width: 80px; */
   display: flex;
 }
 .single-product-card .product-details div {
@@ -446,7 +438,6 @@ nav a {
 
 .single-product-card .product-details strong {
   margin-left: 20px;
-  /* display: none; */
 }
 .product {
   width: 31.5%;
@@ -457,7 +448,6 @@ nav a {
 .product-card {
   color: #183b56;
   display: flex;
-  /* flex-wrap: wrap; */
   padding: 19px;
   font-size: 16px;
   background: white;
